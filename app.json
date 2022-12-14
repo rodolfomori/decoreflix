@@ -18,16 +18,47 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.decoreflix",
+      "buildNumber": "1.0.1"
     },
     "android": {
+      "package": "com.decoreflix",
+      "versionCode": 1,
+      "blockedPermissions": [
+        "ACCESS_BACKGROUND_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ],
+      "permissions": [
+        "CAMERA",
+        "MEDIA_LIBRARY",
+        "CAMERA_ROLL",
+        "NOTIFICATIONS",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#000000"
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e2b25658-744d-443d-a064-4ad647cbd8ee"
+      },
+      "oneSignalAppId": "8a27b9c4-8f4e-4b50-b0ae-113f96b56b0e"
+    },
+    "plugins": [
+      [
+        "onesignal-expo-plugin",
+        {
+          "mode": "production"
+        }
+      ]
+    ]
   }
 }
